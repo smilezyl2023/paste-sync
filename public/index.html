@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨设备粘贴板同步</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header class="header">
+      <h1>📋 粘贴板同步</h1>
+      <p class="subtitle">跨设备轻松同步你的文本内容</p>
+    </header>
+
+    <!-- 输入区域卡片 -->
+    <div class="card input-card">
+      <div class="card-header">
+        <h2>输入内容</h2>
+      </div>
+      <div class="card-body">
+        <textarea
+          id="pasteInput"
+          placeholder="在此输入或粘贴文本内容..."
+          rows="6"
+        ></textarea>
+        <button id="syncButton" class="btn btn-primary">
+          <span class="btn-icon">⬆️</span>
+          <span>同步到云端</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 历史记录卡片 -->
+    <div class="card history-card">
+      <div class="card-header">
+        <h2>历史记录</h2>
+        <div class="header-actions">
+          <button id="selectAllButton" class="btn btn-secondary btn-small">全选</button>
+          <button id="deleteButton" class="btn btn-danger btn-small" disabled>删除选中</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="historyList" class="history-list">
+          <div class="empty-state">
+            <p>暂无历史记录</p>
+            <p class="empty-hint">同步你的第一条内容吧！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 提示消息 -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
