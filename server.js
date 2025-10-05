@@ -3,7 +3,7 @@ const path = require('path');
 const os = require('os');
 
 const app = express();
-const PORT = 3000;
+const PORT = 3030;
 
 // 内存存储粘贴记录
 let pasteHistory = [];
